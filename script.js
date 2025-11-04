@@ -24,6 +24,34 @@ const moi = {
     competences: ["HTML", "CSS"]
 };
 
-console.log(`Je m'appelle ${moi.prenom} ${moi.nom}`);
+console.log("Je m'appelle", moi.prenom , moi.nom);
 
 const notes = [12, 15, 9, 18];
+
+for (let i = 0; i < notes.length; i++) {
+    console.log("La note à l'indice " + i + " est " + notes[i]);
+}
+
+const classe = [
+    { prenom: 'Alice', age: 18 },
+    { prenom: 'Bob', age: 17 }
+];
+
+function saluer(prenom) {
+    const message = "Bonjour " + prenom;
+    return message;
+}
+
+// On "appelle" la fonction
+const salutationPourAlice = saluer("Alice");
+console.log(salutationPourAlice); // Affiche "Bonjour Alice"
+
+const estMajeur = (age) => {
+    return age >= 18;
+}
+
+for (let i = 0; i < classe.length; i++) {
+    if (estMajeur(classe[i].age)) {
+        console.log(classe[i].prenom);
+    }
+}
